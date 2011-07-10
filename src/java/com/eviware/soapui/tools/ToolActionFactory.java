@@ -16,6 +16,7 @@ import java.util.Hashtable;
 
 import org.apache.log4j.Logger;
 
+import com.eviware.soapui.impl.wadl.actions.iface.tools.wadlexport.WADLExport;
 import com.eviware.soapui.impl.wsdl.actions.iface.tools.axis1.Axis1XWSDL2JavaAction;
 import com.eviware.soapui.impl.wsdl.actions.iface.tools.axis2.Axis2WSDL2CodeAction;
 import com.eviware.soapui.impl.wsdl.actions.iface.tools.cxf.CXFAction;
@@ -63,6 +64,7 @@ public class ToolActionFactory
 		toolActionTypeMap.put( "xmlbeans", XmlBeans2Action.class );
 		toolActionTypeMap.put( "ora", OracleWsaGenProxyAction.class );
 		toolActionTypeMap.put( "wsi", WSIAnalyzeAction.class );
+		toolActionTypeMap.put( "wadlexport", WADLExport.class );
 	}
 
 	public static AbstractToolsAction<Interface> createToolAction( String toolName )

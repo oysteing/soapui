@@ -64,10 +64,11 @@ public abstract class AbstractDefinitionExporter<T extends Interface> implements
 		setFilenameForPart( definition.getDefinitionCache().getRootPart(), urlToFileMap, null );
 
 		List<InterfaceDefinitionPart> partList = definition.getDefinitionCache().getDefinitionParts();
-		for( InterfaceDefinitionPart part : partList )
-		{
-			setFilenameForPart( part, urlToFileMap, null );
-		}
+		/* Avoid duplicate entries in urlToFileMap for WADLs */
+//		for( InterfaceDefinitionPart part : partList )
+//		{
+//			setFilenameForPart( part, urlToFileMap, null );
+//		}
 
 		for( InterfaceDefinitionPart part : partList )
 		{

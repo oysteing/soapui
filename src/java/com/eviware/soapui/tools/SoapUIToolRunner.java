@@ -143,7 +143,7 @@ public class SoapUIToolRunner extends AbstractSoapUIRunner implements ToolHost, 
 				if( action != null )
 				{
 					log.info( "Running tool [" + toolName + "] for Interface [" + iface.getName() + "]" );
-					action.performHeadless( iface, null );
+					action.performHeadless( iface, getOutputFolder() );
 				}
 				else
 				{
