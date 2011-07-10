@@ -1,0 +1,5 @@
+.classpath
+.project
+bin
+target
+src/java/com/eviware/soapui/resources/conf/buildinfo.txt
